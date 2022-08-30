@@ -1,11 +1,11 @@
 ## Only a function script right now. Still testing the parsing of a METAR. Eventually will be a package.
 ## There are potential issues with identifying and parsing temperature and pressure values from the METAR.
-## Provide denaltitude with valid ICAO airport code in quotes.
+## Provide denaltitude with valid ICAO airport code in quotes. Elevation units can be "ft" for feet (default) or "m" for meters.
 
 library(pmetar)
 library(tidyverse)
 library(airportr)
-denaltitude=function(airportCode){
+denaltitude=function(airportCode,elevation="ft"){
 airportDF=as.data.frame(airport_detail(airportCode))
 reMetar=metar_get(airportCode)
 reMetar=unlist(str_split(reMetar," "))
@@ -21,5 +21,7 @@ tempVec=unlist(str_split(reMetar[tempLoc],"/"))
 tempC=strtoi(tempVec[1])
 presAlt=(29.92-presHg)*1000+airportDF$Altitude
 denAlt=presAlt+118.8*(tempC-13.39)
-cat("Density Altitude =",denAlt)
+ifelse(elevation=="m",denAlt<-denAlt/3.281,"")
+cat("City =",airportDF$City,":",airportDF$Country,"\n")
+cat("Density Altitude =",round(denAlt,0),elevation)
 }
