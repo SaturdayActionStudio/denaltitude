@@ -1,5 +1,5 @@
 ## Only a function script right now. Still testing the parsing of a METAR. Eventually will be a package.
-## There are potential issues will identifying and parsing temperature and pressure values from the METAR.
+## There are potential issues with identifying and parsing temperature and pressure values from the METAR.
 
 library(pmetar)
 library(tidyverse)
