@@ -1,5 +1,6 @@
 ## Only a function script right now. Still testing the parsing of a METAR. Eventually will be a package.
 ## There are potential issues with identifying and parsing temperature and pressure values from the METAR.
+## Provide denaltitude with valid ICAO airport code in quotes.
 
 library(pmetar)
 library(tidyverse)
