@@ -3,13 +3,10 @@
 ## Provide denaltitude with valid ICAO airport code in quotes. Elevation units can be "ft" for feet (default) or "m" for meters.
 ## Example: denaltitude("KFWA",elevation="ft")
 ##
-library(pmetar)
-library(tidyverse)
-library(airportr)
 denaltitude=function(airportCode,elevation="ft"){
-  airportDF=as.data.frame(airport_detail(airportCode))
+  airportDF=as.data.frame(airportr::airport_detail(airportCode))
   apAlt=airportDF$Altitude
-  reMetar=metar_get(airportCode)
+  reMetar=pmetar::metar_get(airportCode)
   if (reMetar[1]=="No METAR found!") {reMetar[1]} else {
     reMetar=unlist(str_split(reMetar," "))
     for (j in 1:length(reMetar)) {
