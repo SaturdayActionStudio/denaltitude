@@ -13,11 +13,12 @@ denaltitude=function(airportCode,elevation="ft"){
   options(warn = -1)
   airportDF=as.data.frame(airportr::airport_detail(airportCode))
   apAlt=airportDF$Altitude
-  reMetar=pmetar::metar_get(airport=airportCode)
+  reMetar=metar_get(airport=airportCode)
   if (reMetar[1]=="No METAR found!") {reMetar[1]} else {
     reMetar=unlist(strsplit(reMetar," "))
     for (j in 1:length(reMetar)) {
       ifelse(substr(reMetar[j],1,1)=="A",ifelse(nchar(reMetar[j])==5,presLoc<-j,""),"")
+      if(presLoc==j){break}
     }
     presVec=unlist(strsplit(reMetar[presLoc],"A"))
     presHg=strtoi(presVec[2])/100
