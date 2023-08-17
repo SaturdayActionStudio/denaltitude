@@ -7,9 +7,9 @@ Installation in R requires <a href="https://cran.r-project.org/package=devtools"
 devtools::install_github("PlantEcology/denaltitude")
 ```
 
-## Input
+## Example
 ```
-denaltitude(airportCode, elevation="ft")
+denaltitude(airportCode="FWA", elevation="ft")
 ```
 
 ## airportCode
