@@ -7,6 +7,13 @@ Installation in R requires <a href="https://cran.r-project.org/package=devtools"
 devtools::install_github("PlantEcology/denaltitude")
 ```
 
+## Input
 ```
 denaltitude(airportCode, elevation="ft")
 ```
+
+## airportCode
+Valid IATA airport code (character string)
+
+## elevation
+Units for elevation displayed in "ft" (default) or "m" meters
