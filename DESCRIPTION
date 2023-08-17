@@ -1,5 +1,5 @@
 Package: denaltitude
-Title: denaltitude: Calculate Density Altitude from METAR
+Title: Calculate Density Altitude from METAR
 Version: 0.1
 Authors@R: 
     person("Jordan", "Marshall", , "marshalj@pfw.edu", role = c("aut", "cre"))
