@@ -24,9 +24,9 @@ denaltitude=function(airportCode,elevation="ft"){
     denAlt <- presAlt+118.8*(tempC-13.39)
     ifelse(elevation=="m",apAlt<-apAlt/3.281,"")
     ifelse(elevation=="m",denAlt<-denAlt/3.281,"")
-    cat("City =",airportDF$City,":",airportDF$Country,"\n")
+    cat("\n","City =",airportDF$City,":",airportDF$Country,"\n")
     cat("Airport Altitude =",round(apAlt,0),elevation,"\n")
-    cat("Density Altitude =",round(denAlt,0),elevation)
+    cat("Density Altitude =",round(denAlt,0),elevation,"\n")
     options(warn = defaultW)
   }
 }
