@@ -1,6 +1,7 @@
 Package: denaltitude
 Title: Calculate Density Altitude from METAR
 Version: 0.2
+Date: 2024
 Authors@R: 
     person("Jordan", "Marshall", , "jordanmarshall@gmail.com", role = c("aut", "cre"))
 URL: https://github.com/SaturdayActionStudio/denaltitude
