@@ -12,7 +12,7 @@ denaltitude(airportCode, elevation = "ft")
 \item{elevation}{Units for elevation displayed in "ft" (default) or "m" meters.}
 }
 \description{
-Simple function to calculate density altitude based on METAR data for a specific airport.
+Calculate density altitude based on METAR data for a specific airport.
 }
 \examples{
 denaltitude("FWA","ft")
