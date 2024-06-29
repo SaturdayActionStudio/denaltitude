@@ -1,9 +1,9 @@
 Package: denaltitude
 Title: Calculate Density Altitude from METAR
-Version: 0.1
+Version: 0.2
 Authors@R: 
-    person("Jordan", "Marshall", , "marshalj@pfw.edu", role = c("aut", "cre"))
-URL: https://github.com/PlantEcology/denaltitude
+    person("Jordan", "Marshall", , "jordanmarshall@gmail.com", role = c("aut", "cre"))
+URL: https://github.com/SaturdayActionStudio/denaltitude
 Description: Simple function to calculate density altitude based on METAR data for a specific airport.
 License: `use_mit_license()`
 Encoding: UTF-8
