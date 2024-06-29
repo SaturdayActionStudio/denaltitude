@@ -1,4 +1,4 @@
-#' Density Altitude (0.1)
+#' Density Altitude (0.2)
 #'
 #' Simple function to calculate density altitude based on METAR data for a specific airport.
 #' @param airportCode Valid IATA airport code (character string).
@@ -9,6 +9,8 @@
 #' denaltitude("FWA","ft")
 
 denaltitude=function(airportCode,elevation="ft"){
+  require(pmetar)
+  require(airportr)
   defaultW <- getOption("warn")
   options(warn = -1)
   airportDF <- as.data.frame(airportr::airport_detail(airportCode))
