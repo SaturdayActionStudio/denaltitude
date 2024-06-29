@@ -4,7 +4,7 @@ Version: 0.2
 Authors@R: 
     person("Jordan", "Marshall", , "jordanmarshall@gmail.com", role = c("aut", "cre"))
 URL: https://github.com/SaturdayActionStudio/denaltitude
-Description: Simple function to calculate density altitude based on METAR data for a specific airport.
+Description: Calculate density altitude based on METAR data for a specific airport.
 License: `use_mit_license()`
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
