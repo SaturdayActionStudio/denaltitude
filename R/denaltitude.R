@@ -1,13 +1,3 @@
-#' Density Altitude (0.2)
-#'
-#' Simple function to calculate density altitude based on METAR data for a specific airport.
-#' @param airportCode Valid IATA airport code (character string).
-#' @param elevation Units for elevation displayed in "ft" (default) or "m" meters.
-#' @keywords elevation density altitude
-#' @export
-#' @examples
-#' denaltitude("FWA","ft")
-
 denaltitude=function(airportCode,elevation="ft"){
   require(pmetar)
   require(airportr)
