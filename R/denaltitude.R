@@ -5,7 +5,7 @@ denaltitude=function(airportCode,elevation="ft"){
   options(warn = -1)
   airportDF <- as.data.frame(airportr::airport_detail(airportCode))
   apAlt <- airportDF$Altitude
-  reMetar <- pmetar::metar_get(airport=airportCode)
+  reMetar <- suppressMessages(pmetar::metar_get(airport=airportCode))
   presLoc <- 999
   if (reMetar[1] == "No METAR found!") {reMetar[1]} else {
     reMetar <- unlist(strsplit(reMetar," "))
