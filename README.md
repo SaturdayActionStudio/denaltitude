@@ -9,7 +9,7 @@ devtools::install_github("SaturdayActionStudio/denaltitude")
 
 ## Example
 ```
-denalt(airportCode="FWA", elevation="ft")
+denaltitude(airportCode="FWA", elevation="ft")
 ```
 
 ## airportCode
