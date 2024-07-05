@@ -15,7 +15,7 @@ denaltitude(airportCode, elevation = "ft")
 Calculate density altitude based on METAR data for a specific airport.
 }
 \examples{
-denaltitude("FWA","ft")
+denalt("FWA","ft")
 }
 \keyword{altitude}
 \keyword{density}
