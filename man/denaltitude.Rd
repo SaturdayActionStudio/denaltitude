@@ -2,7 +2,7 @@
 % Please edit documentation in R/denaltitude.R
 \name{denaltitude}
 \alias{denaltitude}
-\title{Density Altitude (0.2)}
+\title{Density Altitude (0.3)}
 \usage{
 denaltitude(airportCode, elevation = "ft")
 }
