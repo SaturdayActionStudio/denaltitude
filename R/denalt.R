@@ -1,4 +1,4 @@
-denalt=function(airportCode,elevation="ft"){
+denaltitude=function(airportCode,elevation="ft"){
   suppressMessages(require(pmetar))
   suppressMessages(require(airportr))
   defaultW <- getOption("warn")
