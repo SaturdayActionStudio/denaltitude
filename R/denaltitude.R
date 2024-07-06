@@ -5,6 +5,8 @@ denaltitude=function(airportCode,elevation="ft"){
   options(warn = -1)
   airportDF <- as.data.frame(airportr::airport_detail(airportCode))
   apAlt <- airportDF$Altitude
+  presVec <- vector()
+  tempVec <- vector()
   reMetar <- suppressMessages(pmetar::metar_get(airport=airportCode))
   if (reMetar[1] == "No METAR found!") {reMetar[1]} else {
     reMetar <- unlist(strsplit(reMetar," "))
@@ -20,7 +22,7 @@ denaltitude=function(airportCode,elevation="ft"){
         }
       }  
     }
-    presAlt<- (29.92-presVec)*1000+apAlt
+    presAlt <- (29.92-presVec)*1000+apAlt
     denAlt <- presAlt+118.8*(tempVec-13.39)
     ifelse(elevation=="m",apAlt<-apAlt/3.281,"")
     ifelse(elevation=="m",denAlt<-denAlt/3.281,"")
