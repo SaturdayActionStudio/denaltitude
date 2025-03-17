@@ -1,6 +1,8 @@
 # denaltitude
 Calculate density altitude based on METAR data for a specific airport.
 
+# This project has migrated to <a href="https://codeberg.org/saturdayaction/denaltitude">codeberg.org/saturdayaction/denaltitude</a>. Updated information can be found there.
+
 ## Install
 Installation in R requires <a href="https://cran.r-project.org/package=devtools">devtools</a> or <a href="https://cran.r-project.org/package=remotes">remotes</a>. Requires <a href="https://cran.r-project.org/package=airportr">airportr</a> and <a href="https://cran.r-project.org/package=pmetar">pmetar</a> packages to run.
 ```
